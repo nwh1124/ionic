@@ -1,0 +1,7 @@
+{
+  "name": "ionicPractice",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
