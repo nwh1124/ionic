@@ -2,22 +2,19 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>홈</ion-title>
+        <ion-title>회원 로그인</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">홈</ion-title>
+          <ion-title size="large">회원 로그인</ion-title>
         </ion-toolbar>
       </ion-header>
 
       <div>
         <span>
-          홈 메인
-        </span>
-        <span>
-          
+          로그인
         </span>
       </div>
 
@@ -30,7 +27,7 @@ import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue
 import { useGlobalState } from '@/stores'
 
 export default  {
-  name: 'Main',
+  name: 'Login',
   components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage },
   setup() {
     const globalState = useGlobalState();

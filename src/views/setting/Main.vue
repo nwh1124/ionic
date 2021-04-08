@@ -2,22 +2,19 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>홈</ion-title>
+        <ion-title>설정 메인</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">홈</ion-title>
+          <ion-title size="large">설정 메인</ion-title>
         </ion-toolbar>
       </ion-header>
 
       <div>
-        <span>
-          홈 메인
-        </span>
-        <span>
-          
+        <span>  
+          설정 메인
         </span>
       </div>
 

@@ -5,8 +5,9 @@ import Tabs from '../views/Tabs.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/home/main'
   },
+
   {
     path: '/home/',
     component: Tabs,
@@ -17,25 +18,67 @@ const routes: Array<RouteRecordRaw> = [
       },
     ]
   },
+
   {
-    path: '/tabs/',
+    path: '/article/',
     component: Tabs,
     children: [
       {
         path: '',
-        redirect: '/tabs/tab1'
+        redirect: '/article/list'
       },
       {
-        path: 'tab1',
-        component: () => import('@/views/Tab1.vue')
+        path: 'list',
+        component: () => import('@/views/article/List.vue')
       },
       {
-        path: 'tab2',
-        component: () => import('@/views/Tab2.vue')
+        path: 'detail',
+        component: () => import('@/views/article/Detail.vue')
       },
       {
-        path: 'tab3',
-        component: () => import('@/views/Tab3.vue')
+        path: 'write',
+        component: () => import('@/views/article/Write.vue')
+      },
+      {
+        path: 'modify',
+        component: () => import('@/views/article/Modify.vue')
+      },
+    ]
+  },
+
+  {
+    path: '/member/',
+    component: Tabs,
+    children: [
+      {
+        path: '',
+        redirect: '/member/login'
+      },
+      {
+        path: 'login',
+        component: () => import('@/views/member/Login.vue')
+      },
+      {
+        path: 'join',
+        component: () => import('@/views/member/Join.vue')
+      },
+      {
+        path: 'myPage',
+        component: () => import('@/views/member/MyPage.vue')
+      },
+    ]
+  },
+  {
+    path: '/setting/',
+    component: Tabs,
+    children: [
+      {
+        path: '',
+        redirect: '/setting/main'
+      },
+      {
+        path: 'main',
+        component: () => import('@/views/setting/Main.vue')
       }
     ]
   }
