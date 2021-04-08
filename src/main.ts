@@ -26,12 +26,20 @@ import './theme/variables.css';
 // 전역 css 불러오기
 import './index.css'
 
+// 폰트어썸 불러오기
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faHome, faUser, faList, faCog } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faHome, faUser, faList, faCog);
+
 // 전역 상태 불러오기
 import { createGlobalState, globalStateSymbol } from '@/stores'
 
 const app = createApp(App)
   .use(IonicVue)
   .use(router)
+  .component('font-awesome-icon', FontAwesomeIcon)
   .provide(globalStateSymbol, createGlobalState());
   
 router.isReady().then(() => {
