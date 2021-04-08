@@ -17,7 +17,7 @@
           홈 메인
         </span>
         <span>
-          
+          <div class="bg-red-500">테일윈드</div>
         </span>
       </div>
 
@@ -27,13 +27,13 @@
 
 <script lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import { useGlobalState } from '@/stores'
+import { createGlobalState, useGlobalState } from '@/stores'
 
 export default  {
   name: 'Main',
   components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage },
   setup() {
-    const globalState = useGlobalState();
+    const globalState = createGlobalState();
     return {
       globalState,
     }
